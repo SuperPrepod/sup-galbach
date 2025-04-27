@@ -22,7 +22,7 @@
         @endif
     </head>
     <body style="overflow-x: hidden;">
-    <header>
+    <header class="w-full h-[200px] bg-gray-500 flex flex-row items-center justify-around">
         <div class="logo"></div>
         <div class="header-nav">
             <span class="header-txt">Тренеры</span>
@@ -33,8 +33,8 @@
             <div class="become-coach-button">
                 <span class="button-txt">ХОЧУ СТАТЬ ТРЕНЕРОМ</span>
             </div>
-            <img src="assets/tg.svg" width="100px" height="50px">
-            <img src="assets/vk.svg" width="100px" height="50px">
+            <img src="{{asset('/images/tg.svg')}}" width="100px" height="50px">
+            <img src="{{asset('/images/vk.svg')}}" width="100px" height="50px">
         </div>
     </header>
     <main>
