@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-gray-100">
+<x-guest-layout>
+
     <div class="min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-md w-full bg-white shadow-xl rounded-lg overflow-hidden">
             <!-- Header -->
@@ -22,7 +9,9 @@
             </div>
             
             <!-- Form -->
-            <form class="px-8 py-6" action="#" method="POST">
+ 
+            <form class="px-8 py-6" method="POST" action="{{ route('register') }}">
+                     @csrf
                 <div class="space-y-5">
                     <!-- Name Input -->
                     <div>
@@ -77,8 +66,7 @@
                     
                     <!-- Submit Button -->
                     <div>
-                        <button type="submit" 
-                                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors duration-200">
+                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors duration-200">
                             Зарегистрироваться
                         </button>
                     </div>
@@ -88,7 +76,7 @@
             <!-- Footer -->
             <div class="bg-gray-50 px-8 py-4 border-t border-gray-200">
                 <p class="text-xs text-gray-500 text-center">
-                    Уже есть аккаунт? <a href="#" class="font-medium text-black hover:text-gray-900">Войти</a>
+                    Уже есть аккаунт? <a href="login" class="font-medium text-black hover:text-gray-900">Войти</a>
                 </p>
             </div>
         </div>
@@ -100,5 +88,4 @@
             </p>
         </div>
     </div>
-</body>
-</html>
+</x-guest-layout>
