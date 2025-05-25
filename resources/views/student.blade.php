@@ -28,9 +28,15 @@
     <nav class="bg-gray-900 border-b border-gray-800 py-4 px-6 flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+<<<<<<< HEAD
                 <span class="text-black font-bold text-sm">HS</span>
             </div>
             <h1 class="text-xl font-bold tracking-wider">HIGH SKILL</h1>
+=======
+                <span class="text-black font-bold text-sm">ST</span>
+            </div>
+            <h1 class="text-xl font-bold tracking-wider">CYBERSTUDENT</h1>
+>>>>>>> 960fee48c01bdc29874b9eb964cde9283005da99
         </div>
         <div class="flex items-center space-x-6">
             <a href="#" class="hover:text-gray-300 font-medium">Профиль</a>
