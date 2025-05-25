@@ -4,13 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>NE PRIDUMAL</title>
+        <title>HIGH SKILL</title>
 
         <!-- Fonts но это не точно -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
         <link rel="stylesheet" href="{{asset('/css/main-page.css')}}">
         <link rel="stylesheet" href="{{asset('/css/txt-styles.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -22,19 +23,22 @@
         @endif
     </head>
     <body style="overflow-x: hidden;">
-    <header class="w-full h-[200px] bg-gray-500 flex flex-row items-center justify-around">
-        <div class="logo"></div>
+    <header class="w-full h-[200px] flex flex-row items-center justify-around border-b-2 border-white">
+    <img src="{{asset('/images/logo.svg')}}">
         <div class="header-nav">
             <span class="header-txt">Тренеры</span>
             <span class="header-txt">Игры</span>
             <span class="header-txt">Отзывы</span>
         </div>
-        <div class="media-buttons">
-            <div class="become-coach-button">
-                <span class="button-txt">ХОЧУ СТАТЬ ТРЕНЕРОМ</span>
-            </div>
-            <img src="{{asset('/images/tg.svg')}}" width="100px" height="50px">
-            <img src="{{asset('/images/vk.svg')}}" width="100px" height="50px">
+        <div class="w-[30%] flex flex-row items-center justify-around">
+        <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
+                    <a href="register"class="text-xl text-white">ХОЧУ СТАТЬ ТРЕНЕНРОМ</a>
+        </button>
+        <button class="w-[100px] h-[55px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
+                    <a href="login"class="text-xl text-white">ВОЙТИ</a>
+        </button>
+            <img src="{{asset('/images/tg.svg')}}" width="50px" height="50px">
+            <img src="{{asset('/images/vk.svg')}}" width="50px" height="50px">
         </div>
     </header>
     <main>
@@ -43,16 +47,16 @@
                 <span class="promo-txt-style">
                     ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ С ПРОФФЕСИОНАЛАМИ
                 </span>
-                <button class="select-button">
-                    <span class="button-txt">
+                <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
+                    <a href="" class="text-white">
                         ВЫБЕРИ СВОЮ ИГРУ
-                    </span>
+                    </a>
                 </button>
             </div>
-            <img src="assets/gamer.jpg">
+            <img class="drop-shadow-[0_0_4px_#Ffff]" src="{{asset('/images/main-img.png')}}">
         </div>
 
-        <div class="stats-container">
+        <div class="mt-[50px] max-w-[800px] p-[30px] border-3 border-dashed border-gray-500 rounded-xl shadow-lg shadow-white/10">
             <h1>О нас в цифрах:</h1>
             <p class="subtitle">Мы тренировочная платформа №1 в России и СНГ</p>
             
@@ -79,35 +83,99 @@
             </div>
         </div>
 
-        <div class="package-container">
+        <div class="mt-[73px] max-w-[1000px] h-[600px] p-[30px] border-3 border-dashed border-gray-500 flex flex-row rounded-xl shadow-lg shadow-white/10">
             <div class="left-part">
-                <img src="assets/oper.png">
+                <img src="{{asset('/images/oper.png')}}" class="drop-shadow-[0_0_4px_#Ffff]">
             </div>
-            <div class="right-part">
+            <div class="w-[42%] flex flex-col justify-around items-center">
                 <h1>Пакет BEGIN</h1>
-                <div class="small-container">
+                <div class="w-[400px] h-[75px] rounded-2xl border border-white flex items-center justify-center">
                     <span class="promo-txt-style-2">ВВОДНАЯ ТРЕНИРОВКА</span>
                 </div>
-                <div class="small-container">
+                <div class="w-[400px] h-[75px] rounded-2xl border border-white flex items-center justify-center">
                     <span class="promo-txt-style-2">СОВМЕСТАНЯ ИГРА С ПРОФИ</span>
                 </div>
-                <div class="small-container">
+                <div class="w-[400px] h-[75px] rounded-2xl border border-white flex items-center justify-center">
                     <span class="promo-txt-style-2">РАЗБОР РЕПЛЕЯ СОВМЕСТНОЙ ИГРЫ</span>
                 </div>
-                <button class="select-button">
-                    КУПИТЬ
+                <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
+                    <p class="text-xl text-white">КУПИТЬ</P>
                 </button>
             </div>
         </div>
+        <div class="min-h-screen bg-black p-8">
+  <!-- Заголовок -->
+  <h1 class="text-white text-4xl font-bold text-center mb-8">Выбери игру</h1>
 
-        <div class="game-selector">
-            <h1>ВЫБЕРИ ИГРУ</h1>
-            <div class="game-selector-table">
-                <div class="game-container" class="valorant"></div>
-                <div class="game-container" class="lol"></div>
-                <div class="game-container" class="cs"></div>
+  <!-- Контейнер с карточками -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+    <!-- Карточка 1 -->
+    <div class="border-4 border-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+        <div class="aspect-[3/4] relative">
+  <!-- Основное изображение -->
+            <a href="lol">
+                 <img
+                src="{{asset('/images/lol.jpg')}}" 
+                alt="Игра 1"
+                class="w-full h-full object-cover hover:blur-[2px] transition-all"
+            >
+            </a>
+  <!-- Логотип поверх -->
+             <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4">
+                <img 
+                    src="{{asset('/images/lol-logo.png')}}"
+                    alt="Логотип"
+                    class="w-1/2 h-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                >
             </div>
         </div>
+    </div>
+
+    <!-- Карточка 2 -->
+    <div class="border-4 border-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+    <div class="aspect-[3/4] relative">
+  <!-- Основное изображение -->
+            <a>
+                <img 
+                src="{{asset('/images/cs.jpeg')}}" 
+                alt="Игра 1"
+                class="w-full h-full object-cover hover:blur-[2px] transition-all"
+            >
+            </a>
+  <!-- Логотип поверх -->
+             <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4">
+                <img 
+                    src="{{asset('/images/cs-logo.png')}}"
+                    alt="Логотип"
+                    class="w-1/2 h-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                >
+            </div>
+        </div>
+    </div>
+
+    <!-- Карточка 3 -->
+    <div class="border-4 border-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+    <div class="aspect-[3/4] relative">
+  <!-- Основное изображение -->
+            <img 
+                src="{{asset('/images/bh.jpg')}}" 
+                alt="Игра 1"
+                class="w-full h-full object-cover hover:blur-[2px] transition-all"
+            >
+  <!-- Логотип поверх -->
+             <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4">
+                <img 
+                    src="{{asset('/images/bh-logo.gif')}}"
+                    alt="Логотип"
+                    class="w-1/1 h-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                >
+            </div>
+        </div>
+    </div>
+
+    <!-- Добавьте больше карточек по аналогии -->
+  </div>
+</div>
     </main>
 </body>
 </html>
