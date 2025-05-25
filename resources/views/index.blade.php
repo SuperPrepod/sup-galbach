@@ -34,8 +34,8 @@
         <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
                     <a href="register"class="text-xl text-white">ХОЧУ СТАТЬ ТРЕНЕНРОМ</a>
         </button>
-         <button class="bg-white text-black px-4 py-1 rounded-md hover:bg-gray-200 font-semibold">
-                <a href="login">Войти</a>
+        <button class="w-[100px] h-[55px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
+                    <a href="login"class="text-xl text-white">ВОЙТИ</a>
         </button>
             <img src="{{asset('/images/tg.svg')}}" width="50px" height="50px">
             <img src="{{asset('/images/vk.svg')}}" width="50px" height="50px">
