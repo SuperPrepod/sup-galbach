@@ -55,7 +55,7 @@
                     </a>
                 </button>
             </div>
-            <img src="{{asset('/images/gamer.jpg')}}">
+            <img class="drop-shadow-[0_0_4px_#Ffff]" src="{{asset('/images/main-img.png')}}">
         </div>
 
         <div class="mt-[50px] max-w-[800px] p-[30px] border-3 border-dashed border-gray-500 rounded-xl shadow-lg shadow-white/10">
