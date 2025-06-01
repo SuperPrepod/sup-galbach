@@ -32,7 +32,7 @@
         </div>
         <div class="w-[30%] flex flex-row items-center justify-around">
         <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
-                    <a href="register"class="text-xl text-white">ХОЧУ СТАТЬ ТРЕНЕНРОМ</a>
+                    <a href="register"class="text-xl text-white">ЗАРЕГИСТРИРОВАТЬСЯ</a>
         </button>
         <button class="w-[100px] h-[55px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
                     <a href="login"class="text-xl text-white">ВОЙТИ</a>
