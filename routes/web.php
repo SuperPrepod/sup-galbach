@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaymentController;
 
 Route::get('/', function () {
     return view('index');
@@ -10,6 +12,18 @@ Route::get('/', function () {
 Route::get('/lol', function () {
     return view('lol_page');
 });
+
+Route::get('/pay', function () {
+    return view('payment');
+});
+
+Route::get('/thankyou', function () {
+    return view('thankyou');
+});
+
+Route::get('/payment', [PaymentController::class, 'showForm'])->name('payment.form');
+Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
+Route::get('/thankyou', [PaymentController::class, 'thankyou'])->name('payment.thankyou');
 
 Route::get('/student', function () {
     return view('student');
