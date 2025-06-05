@@ -31,7 +31,7 @@ Route::get('/student', function () {
 
 Route::get('/index', function () {
     return view('index_vf');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['guest'])->name('dashboard');
 
 Route::post('/logout', [AuthenticationController::class, 'logout'])
     ->middleware(['auth', 'verified'])->name('logout');
