@@ -14,11 +14,11 @@ Route::get('/lol', function () {
 });
 
 Route::get('/pay', function () {
-    return view('payment');
+    return view('payment.form');
 });
 
 Route::get('/thankyou', function () {
-    return view('thankyou');
+    return view('payment.thankyou');
 });
 
 Route::get('/payment', [PaymentController::class, 'showForm'])->name('payment.form');
