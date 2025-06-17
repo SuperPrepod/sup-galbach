@@ -22,6 +22,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_trainer',
+        'description'
     ];
 
     /**
@@ -45,6 +47,11 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+     public function scopeTrainers($query)
+    {
+        return $query->where('is_trainer', true);
     }
     
  

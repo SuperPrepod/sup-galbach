@@ -5,7 +5,7 @@
             <!-- Header -->
             <div class="bg-black text-white py-6 px-8">
                 <h2 class="text-2xl font-bold text-center">Создайте аккаунт</h2>
-                <p class="mt-2 text-center text-gray-300">Заполните форму для регистрации</p>
+                <p class="mt-2 text-center text-gray-300">Заполните форму для верификации</p>
             </div>
             
             <!-- Form -->
@@ -52,6 +52,14 @@
                                 placeholder="Повторите пароль">
                         </div>
                     </div>
+
+                        <div>
+                            <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Расскажите о себе. Ваш опыт, дисциплины и т.д.</label>
+                            <textarea id="description" name="description" rows="3"
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black"
+                                placeholder="Расскажите о себе" required>
+                            </textarea>
+                         </div>
                     
                     <!-- Terms Checkbox -->
                     <div class="flex items-start">
@@ -67,7 +75,7 @@
                     <!-- Submit Button -->
                     <div>
                         <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors duration-200">
-                            Зарегистрироваться
+                            Отправить на верификацию
                         </button>
                     </div>
                 </div>

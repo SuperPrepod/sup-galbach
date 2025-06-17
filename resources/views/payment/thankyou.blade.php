@@ -29,7 +29,7 @@
         
         <!-- Кнопка возврата -->
         <div class="mt-6">
-            <a href="/index" class="inline-block px-4 py-2 border border-black rounded-md text-black hover:bg-gray-50 transition">
+            <a href="/" class="inline-block px-4 py-2 border border-black rounded-md text-black hover:bg-gray-50 transition">
                 Вернуться на главную
             </a>
         </div>

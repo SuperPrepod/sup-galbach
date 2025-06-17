@@ -26,16 +26,13 @@
     <header class="w-full h-[200px] flex flex-row items-center justify-around border-b-2 border-white">
     <img src="{{asset('/images/logo.svg')}}">
         <div class="header-nav">
-            <span class="header-txt">Тренеры</span>
-            <span class="header-txt">Игры</span>
+            <a href="/trainers" class="header-txt">Тренеры</a>
+            <a href="#games" class="header-txt">Игры</a>
             <span class="header-txt">Отзывы</span>
         </div>
         <div class="w-[30%] flex flex-row items-center justify-around">
         <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
-                    <a href="register"class="text-xl text-white">ЗАРЕГИСТРИРОВАТЬСЯ</a>
-        </button>
-        <button class="w-[100px] h-[55px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
-                    <a href="login"class="text-xl text-white">ВОЙТИ</a>
+                    <a href="register"class="text-xl text-white">Стать тренером</a>
         </button>
             <img src="{{asset('/images/tg.svg')}}" width="50px" height="50px">
             <img src="{{asset('/images/vk.svg')}}" width="50px" height="50px">
@@ -48,7 +45,7 @@
                     ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ С ПРОФФЕСИОНАЛАМИ
                 </span>
                 <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
-                    <a href="" class="text-white">
+                    <a href="#games" class="text-white">
                         ВЫБЕРИ СВОЮ ИГРУ
                     </a>
                 </button>
@@ -56,7 +53,7 @@
             <img class="drop-shadow-[0_0_4px_#Ffff]" src="{{asset('/images/main-img.png')}}">
         </div>
 
-        <div class="mt-[50px] max-w-[800px] p-[30px] border-3 border-dashed border-gray-500 rounded-xl shadow-lg shadow-white/10">
+        <div class="mt-[50px] max-w-[800px] p-[30px] border-[3px] border-dashed border-gray-500 rounded-xl shadow-lg shadow-white/10">
             <h1>О нас в цифрах:</h1>
             <p class="subtitle">Мы тренировочная платформа №1 в России и СНГ</p>
             
@@ -83,7 +80,7 @@
             </div>
         </div>
 
-        <div class="mt-[73px] max-w-[1000px] h-[600px] p-[30px] border-3 border-dashed border-gray-500 flex flex-row rounded-xl shadow-lg shadow-white/10">
+        <div class="mt-[73px] max-w-[1000px] h-[600px] p-[30px] border-[3px] border-dashed border-gray-500 flex flex-row rounded-xl shadow-lg shadow-white/10">
             <div class="left-part">
                 <img src="{{asset('/images/oper.png')}}" class="drop-shadow-[0_0_4px_#Ffff]">
             </div>
@@ -99,7 +96,7 @@
                     <span class="promo-txt-style-2">РАЗБОР РЕПЛЕЯ СОВМЕСТНОЙ ИГРЫ</span>
                 </div>
                 <button class="w-[300px] h-[75px] rounded-2xl border border-white flex items-center justify-center hover:bg-grey hover:text-black transition-all cursor-pointer active:scale-95 active:bg-gray-400 shadow-lg shadow-white/20">
-                    <p class="text-xl text-white">КУПИТЬ</P>
+                    <a class="text-xl text-white" href="pay">КУПИТЬ</a>
                 </button>
             </div>
         </div>
@@ -108,7 +105,7 @@
   <h1 class="text-white text-4xl font-bold text-center mb-8">Выбери игру</h1>
 
   <!-- Контейнер с карточками -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+  <div id="games" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
     <!-- Карточка 1 -->
     <div class="border-4 border-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
         <div class="aspect-[3/4] relative">
@@ -135,7 +132,7 @@
     <div class="border-4 border-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
     <div class="aspect-[3/4] relative">
   <!-- Основное изображение -->
-            <a>
+            <a href="cs2">
                 <img 
                 src="{{asset('/images/cs.jpeg')}}" 
                 alt="Игра 1"
@@ -157,11 +154,13 @@
     <div class="border-4 border-white rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
     <div class="aspect-[3/4] relative">
   <!-- Основное изображение -->
-            <img 
+            <a href="/bh">
+                <img 
                 src="{{asset('/images/bh.jpg')}}" 
                 alt="Игра 1"
                 class="w-full h-full object-cover hover:blur-[2px] transition-all"
             >
+            </a>
   <!-- Логотип поверх -->
              <div class="absolute bottom-0 left-0 right-0 flex justify-center p-4">
                 <img 
@@ -177,5 +176,25 @@
   </div>
 </div>
     </main>
+     <footer class="bg-gray-900 border-t border-gray-800 py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-lg text-white font-bold tracking-wider flex items-center">
+                        <img class="object-scale-down h-12 w-24" src="{{asset('/images/logo.svg')}}">
+                        HIGH SKILL
+                    </h2>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">Помощь</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">О нас</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-500">Контакты</a>
+                </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
+                &copy; 2025 High skill. Все права защищены. High Skill являются товарными знаками или зарегистрированными товарными знаками High skill corp.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
